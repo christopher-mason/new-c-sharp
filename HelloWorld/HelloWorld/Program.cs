@@ -35,24 +35,43 @@ namespace Variables
 {
     class Program
     {
-        enum PlayerState
+        /*enum PlayerState
         {
             Idle,
             Attacking
         }
-        static PlayerState playerState;
+        static PlayerState playerState;*/
         static void Main(string[] args)
         {
 
-            switch (playerState)
+            string word = string.Empty;
+            string wordRev = string.Empty;
+            Console.Write("Enter a word : ");
+            word = Console.ReadLine();
+            if (word != null)
+            {
+                for (int i = word.Length - 1; i >= 0; i--)
+                {
+                    wordRev += word[i].ToString();
+                }
+                if (wordRev == word)
+                {
+                    Console.WriteLine("That word is a palindrome");
+                }
+                else
+                {
+                    Console.WriteLine("That word is not a palindrome");
+                }
+            }
+            //Console.ReadLine();
+
+            /*switch (playerState)
             {
                 case PlayerState.Idle:
                     break;
                 case PlayerState.Attacking:
                     break;
-            }
-
-            MyClass myClass = new MyClass();
+            }*/
 
             //Console.WriteLine("Hellow World");
 
@@ -102,7 +121,7 @@ namespace Variables
             {
                 Console.WriteLine("False");
             } */
-            
+
             //int i = 56;
 
             //Console.WriteLine("Hellow World" + i);
@@ -116,6 +135,8 @@ namespace Variables
 
         class MyClass
         {
+            float myFloat;
+            int myInt;
             public MyClass()
             {
                 //Customer Constructor
@@ -127,9 +148,10 @@ namespace Variables
             throw new NotImplementedException();
         }
 
-        static void TestFunction()
+        private static void TestFunction()
         {
-
+            // Do something
+            // public and private are accessors
         }
         static bool SecondFunction(int i)
         {
