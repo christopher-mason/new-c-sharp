@@ -43,8 +43,9 @@ namespace Variables
         static PlayerState playerState;*/
         static void Main(string[] args)
         {
-
-            string word = string.Empty;
+            System.Random random = new System.Random();
+            System.Console.WriteLine(random.Next(1000));
+            /*string word = string.Empty;
             string wordRev = string.Empty;
             Console.Write("Enter a word : ");
             word = Console.ReadLine();
@@ -62,7 +63,7 @@ namespace Variables
                 {
                     Console.WriteLine("That word is not a palindrome");
                 }
-            }
+            }*/
             //Console.ReadLine();
 
             /*switch (playerState)
